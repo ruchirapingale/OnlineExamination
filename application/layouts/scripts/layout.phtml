@@ -1,0 +1,52 @@
+<!-- application/layouts/scripts/layout.phtml -->
+<?php echo $this->doctype() ?>
+<html class="js" dir="ltr" version="XHTML+RDFa 1.0" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head profile="http://www.w3.org/1999/xhtml/vocab">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Online Examination</title>
+    <?php
+    echo $this->headLink()->appendStylesheet($this->baseUrl() . '/css/style.css');
+    echo $this->headLink()->appendStylesheet($this->baseUrl() . '/css/layout.css');
+    echo $this->headLink()->appendStylesheet($this->baseUrl() . '/css/system.css');
+    echo $this->headLink()->appendStylesheet($this->baseUrl() . '/css/color.css');
+    ?>
+  </head>
+  <body class="html front not-logged-in one-sidebar sidebar-first page-node">
+    <div id="page-wrapper">
+      <div id="page">
+        <div id="header" class="without-secondary-menu">
+          <?php echo $this->render('header.phtml'); ?>
+        </div>
+        <div class="clearfix" id="main-wrapper"><div class="clearfix" id="main">
+            <div class="column sidebar" id="sidebar-first">
+              <?php echo $this->render('sidebar-first.phtml'); ?>
+
+            </div> <!-- /.section, /#sidebar-first -->
+
+            <div class="column" id="content">
+              <div class="section">
+                <?php echo $this->layout()->content ?>
+              </div>
+            </div> <!-- /.section, /#content -->
+
+            <div class="column sidebar" id="sidebar-second">
+              <?php echo $this->render('sidebar-second.phtml'); ?>
+            </div> <!-- /.section, /#sidebar-second -->
+          </div>
+        </div>
+        <div id="footer-wrapper">
+          <?php echo $this->render('footer.phtml'); ?>
+        </div>
+      </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
